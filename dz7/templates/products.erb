@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Товары
+    </title>
+  </head>
+  <body>
+    <h1>Список товаров</h1>
+    <% if products.nil? posts.count == 0 %>
+      <h2>Товаров не существуе!</h2>
+    <% else %>
+
+    <ul>
+      <% products.each do |product| %>
+        <li>
+          <h3>Название: <%= product[:title] %></h3>
+          <div>Цена: <%= product[:price] %>$</div>
+          <p><a href="/products/<%= product[:_id] %>">Подробности</a></p>
+        </li><br>
+      <% end
+          end
+       %>
+    </ul>
+
+  </body>
+  <footer>
+      <h1>
+          <p>Contacts</p>
+      </h1>
+      <h3>
+          <p>
+              tel: 1 7543029731
+              name: Vlad Buckach
+          </p>
+      </h3>
+  </footer>
+</html>

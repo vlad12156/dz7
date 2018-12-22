@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Product page
+    </title>
+
+  </head>
+  <body>
+    <% if products.nil? %>
+      <h1>Your item not found</h1>
+    <% else %>
+      <p>Name: <%= products[:title] %></p>
+      <p>About: <%= products[:about] %></p>
+      <p>Price: <%= products[:price] %>$</p>
+    <% end %>
+  </body>
+  <footer>
+      <h1>
+          <p>Contacts</p>
+      </h1>
+      <h3>
+          <p>
+              tel: 1 7543029731
+              name: Vlad Buckach
+          </p>
+      </h3>
+  </footer>
+</html>
